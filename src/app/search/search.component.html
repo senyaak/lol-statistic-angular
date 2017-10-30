@@ -1,0 +1,5 @@
+<div>
+  <label for="main-search"></label>
+  <input [(ngModel)]="name" id="main-search" type="text">
+  <button [disabled]="name.length === 0" (click)="onSelect(name)" type="button" name="button">go</button>
+</div>

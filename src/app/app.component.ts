@@ -1,10 +1,14 @@
-import { Component } from '@angular/core';
-
+import { Component, Input } from "@angular/core";
+import { Summoner } from "app/models/summoner";
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  title = 'app';
+  curSummoner: Summoner;
+  applySummoner(newSummoner): void {
+    console.log("emitted", newSummoner);
+    this.curSummoner = newSummoner;
+  }
 }
