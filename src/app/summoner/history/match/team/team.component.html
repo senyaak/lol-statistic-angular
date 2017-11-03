@@ -1,0 +1,9 @@
+<div *ngIf="team && team.length > 0; else showMsg">
+  <div *ngFor="let player of team; let i = index" >
+    {{player.championId}}
+    <img *ngIf="championNames[i]" src="http://ddragon.leagueoflegends.com/cdn/{{version}}/img/champion/{{championNames[i]}}.png">
+  </div>
+</div>
+<ng-template #showMsg>
+  No team Data found!
+</ng-template>

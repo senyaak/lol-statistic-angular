@@ -1,4 +1,12 @@
+<img
+  *ngIf="summoner.profileIconId || version"
+  src="http://ddragon.leagueoflegends.com/cdn/{{version}}/img/profileicon/{{summoner.profileIconId}}.png"
+  width="75px"
+  height="75px">
 <ul>
   <li> Name: {{ summoner.name }}</li>
   <li> Level: {{ summoner.summonerLevel }}</li>
 </ul>
+
+<app-history [matchList]="matchList">
+</app-history>

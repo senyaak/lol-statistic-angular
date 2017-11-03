@@ -1,0 +1,11 @@
+<div *ngIf="matchList">
+  <ul>
+    <li *ngFor="let match of matchList.matches">
+      <app-match [matchId]="match.gameId">
+      </app-match>
+    </li>
+  </ul>
+</div>
+<div *ngIf="!matchList || matchList.length === 0">
+  No match history found.
+</div>

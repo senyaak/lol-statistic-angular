@@ -10,13 +10,20 @@ import { SummonerService } from "app/summoner.service";
 })
 export class SearchComponent implements OnInit {
   name = "";
+  error: string = null;
   summoner: Summoner;
   @Output() updateSummoner: EventEmitter<Summoner> = new EventEmitter();
   onSelect(summonerName: string): void {
     this.summonerService.getSummoner(summonerName).then((result: Summoner) => {
+      // FIXME remove log
       console.log("Result ", result);
       this.summoner = result;
       this.updateSummoner.emit(result);
+      if (!result) {
+        this.error = "Can't get Summoner";
+      } else {
+        this.error = null;
+      }
     });
   }
   constructor(private summonerService: SummonerService) { }

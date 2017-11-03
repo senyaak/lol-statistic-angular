@@ -1,5 +1,8 @@
 <div>
-  <label for="main-search"></label>
+  <label for="main-search">Search: </label>
   <input [(ngModel)]="name" id="main-search" type="text">
   <button [disabled]="name.length === 0" (click)="onSelect(name)" type="button" name="button">go</button>
+</div>
+<div *ngIf="error">
+  {{ error }}
 </div>
