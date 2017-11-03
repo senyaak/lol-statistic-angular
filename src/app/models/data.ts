@@ -16,17 +16,17 @@ export class ChampionInfo {
     w: number;
     x: number;
     y: number;
-  }
-  info:{
+  };
+  info: {
     attack: number;
     defense: number;
     magic: number;
     difficulty: number;
-  }
+  };
   key: string; // numeric
   name: string;
   partype: string;
-  stats: any;//{hp: 580, hpperlevel: 85, mp: 100, mpperlevel: 0, movespeed: 345, …}
+  stats: any; //{hp: 580, hpperlevel: 85, mp: 100, mpperlevel: 0, movespeed: 345, …}
   tags: string[];
   title: string;
   version: string;

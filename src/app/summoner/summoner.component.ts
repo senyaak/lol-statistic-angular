@@ -10,7 +10,7 @@ import { MatchList } from "app/models/matchList";
 @Component({
   selector: "app-summoner",
   templateUrl: "./summoner.component.html",
-  styleUrls: ["./summoner.component.css"],
+  styleUrls: ["./summoner.component.less"],
   providers: [MatchesService],
 })
 export class SummonerComponent implements OnInit {
@@ -19,7 +19,8 @@ export class SummonerComponent implements OnInit {
     this._summoner = value;
     // TODO get statistics
     this.MatchesService.getMatchList(value.accountId, {beginIndex: 0, endIndex: 4}).then(matchList => {
-      console.log(matchList);
+      // console.log(matchList);
+      // console.log(this.summoner);
       this.matchList = matchList;
     });
   }

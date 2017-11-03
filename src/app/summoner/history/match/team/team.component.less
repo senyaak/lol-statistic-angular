@@ -1,0 +1,16 @@
+.team-table {
+  margin-bottom: 5px;
+  columns: 100px 2;
+  &>div {
+  }
+  & [class^="team-"] {
+    max-width: 100px;
+    white-space: nowrap;
+    & img.champion-img {
+      width: 20px;
+      height: 20px;
+      position: relative;
+      bottom: -4px;
+    }
+  }
+}

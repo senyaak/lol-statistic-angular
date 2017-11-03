@@ -7,7 +7,7 @@ import { ChampionsInfo } from "app/models/data";
 
 @Injectable()
 export class ConfigService {
-  private region: string = "euw1";
+  private region = "euw1";
   get apiURL(): string {
     return `https://${this.region}.api.riotgames.com/lol/`;
   }
@@ -21,7 +21,7 @@ export class ConfigService {
   private _championsInfo;
   get championsInfo(): Promise<ChampionsInfo> {
     // return Promise.resolve("test");
-    if(!this._championsInfo) {
+    if (!this._championsInfo) {
       return this.clientVersion.then(version => {
         return this.http.get(`http://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion.json`);
       }).then(res => {

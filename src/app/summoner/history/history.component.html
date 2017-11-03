@@ -1,7 +1,7 @@
 <div *ngIf="matchList">
-  <ul>
+  <ul class="history-list">
     <li *ngFor="let match of matchList.matches">
-      <app-match [matchId]="match.gameId">
+      <app-match [matchId]="match.gameId" [summonerId]="summonerId">
       </app-match>
     </li>
   </ul>

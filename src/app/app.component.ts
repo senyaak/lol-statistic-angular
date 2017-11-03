@@ -3,11 +3,7 @@ import { Summoner } from "app/models/summoner";
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"]
+  styleUrls: ["./app.component.less"]
 })
 export class AppComponent {
-  curSummoner: Summoner;
-  applySummoner(newSummoner): void {
-    this.curSummoner = newSummoner;
-  }
 }

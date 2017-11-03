@@ -1,3 +1,3 @@
-const key  = "RGAPI-b11ffd05-4d24-4291-a23e-7330c6dcd3f2";
+const key  = "RGAPI-ad2f5af3-b3b5-4d78-8947-09d906ee709d";
 
 export default key;

@@ -1,13 +1,20 @@
-<div *ngIf="match">
-  Match info:
-  <div>
-    Date - {{ match.gameCreation | date:"dd.MM.yy, HH:mm" }}
-  </div>
-  <div>
-    Duration - {{ match.gameDuration/60 | number: "1.0-0" }}min
+<div *ngIf="match" class="match-description">
+  <div class="game">
+    <div>
+      {{ match.gameMode }}
+    </div>
+    <div>
+      {{ gameResult }}
+    </div>
+    <div>
+      Date - {{ match.gameCreation | date:"dd.MM.yy, HH:mm" }}
+    </div>
+    <div>
+      Duration - {{ match.gameDuration/60 | number: "1.0-0" }}min
+    </div>
   </div>
   <div class="team">
-    <app-team [team]="match.participants">
+    <app-team [team]="match.participants" [team-members]="match.participantIdentities">
     </app-team>
   </div>
 

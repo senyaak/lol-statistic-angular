@@ -1,7 +1,8 @@
-<div *ngIf="team && team.length > 0; else showMsg">
-  <div *ngFor="let player of team; let i = index" >
-    {{player.championId}}
-    <img *ngIf="championNames[i]" src="http://ddragon.leagueoflegends.com/cdn/{{version}}/img/champion/{{championNames[i]}}.png">
+<div *ngIf="team && team.length > 0; else showMsg" class="team-table">
+  <div *ngFor="let player of team; let i = index" [ngClass]="{'team-blue': player.teamId === 100, 'team-red': player.teamId === 200}">
+
+    <img class="champion-img" *ngIf="championNames[i]" src="http://ddragon.leagueoflegends.com/cdn/{{version}}/img/champion/{{championNames[i]}}.png">
+    <span> {{teamMembers[i].player.summonerName}} </span>
   </div>
 </div>
 <ng-template #showMsg>
